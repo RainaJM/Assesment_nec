@@ -1,0 +1,13 @@
+<div class="list-wrap">
+        <mat-grid-list [cols]="breakpoint" gutterSize="10px" (window:resize)="onResize($event)">
+            <mat-grid-tile  *ngFor="let user of users" 
+            colspan="1"
+            rowspan="1">
+               <mat-card class="user-card"> <h3>{{user.firstName}} {{user.lastName}} </h3>
+                <p>Date of birth: {{user.dob}}</p>
+                <p>Gender : {{user.gender}}</p>
+                <p>Status: {{user.status}}</p></mat-card>
+            </mat-grid-tile>
+            </mat-grid-list>
+        
+</div>
