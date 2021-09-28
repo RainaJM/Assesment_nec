@@ -1,4 +1,9 @@
-<div class="list-wrap">
+<div>
+    
+    <div class="user-header">
+        <span>List of users</span>
+        <button mat-raised-button routerLink="/add-user"  class="btn-add-user">Add user</button>
+    </div>
         <mat-grid-list [cols]="breakpoint" gutterSize="10px" (window:resize)="onResize($event)">
             <mat-grid-tile  *ngFor="let user of users" 
             colspan="1"

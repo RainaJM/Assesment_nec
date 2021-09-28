@@ -13,12 +13,18 @@ export class ListUsersComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.breakpoint = window.innerWidth <= 500 ? 1 : 4;
+    this.onResize(null);
     this.getUserList();
   }
 
   onResize(event) {
-    this.breakpoint = event.target.innerWidth <= 500 ? 1 : 4;
+    if (window.innerWidth <= 500) {
+      this.breakpoint = 1;
+    } else if (window.innerWidth <= 1440 && window.innerWidth > 500) {
+      this.breakpoint = 4;
+    } else {
+      this.breakpoint = 6;
+    }
   }
 
   private getUserList() {

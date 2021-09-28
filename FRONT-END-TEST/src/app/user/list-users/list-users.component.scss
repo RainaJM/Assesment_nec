@@ -3,3 +3,17 @@
   height: 100%;
   box-sizing: border-box;
 }
+.user-header {
+  display: flex;
+  height: 38px;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  span {
+    font-size: 19px;
+  }
+  .btn-add-user {
+    position: absolute;
+    right: 0;
+  }
+}
